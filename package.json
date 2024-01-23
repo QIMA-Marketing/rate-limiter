@@ -1,22 +1,41 @@
 {
-  "name": "rate-limiter",
+  "name": "@qima/rate-limiter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A client-side rate limiter.",
+  "main": "./dist/RateLimiter.js",
+  "module": "./dist/RateLimiter.mjs",
+  "types": "./dist/RateLimiter.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsup src/RateLimiter.ts --format cjs,esm --minify --dts --clean",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "limiter": "^2.1.0",
-    "ts-jest": "^29.1.2"
+  "keywords": [
+    "concurrency",
+    "qima",
+    "rate limit"
+  ],
+  "homepage": "https://github.com/QIMA-Marketing/rate-limiter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QIMA-Marketing/rate-limiter.git"
   },
+  "bugs": "https://github.com/QIMA-Marketing/rate-limiter/issues",
+  "author": {
+    "name": "QIMA, Zach Broniszewski",
+    "email": "marketing.pkg@qima.com",
+    "url": "https://www.qima.com/"
+  },
+  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
-    "eslint": "^8.56.0"
+    "eslint": "^8.56.0",
+    "tsup": "^8.0.1",
+    "ts-jest": "^29.1.2"
   }
 }
